@@ -1,0 +1,26 @@
+{
+  "name": "busybox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build":"parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekkushwaha66/busybox.git"
+  },
+  "keywords": [],
+  "author": "Vivek Kushwaha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivekkushwaha66/busybox/issues"
+  },
+  "homepage": "https://github.com/vivekkushwaha66/busybox#readme",
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.8"
+  }
+}
