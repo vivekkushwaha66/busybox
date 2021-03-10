@@ -1,0 +1,15 @@
+@import "../helper/mixins.scss";
+
+
+@mixin normalize{
+    *, *::before, *::after{
+        @include setBoxSizing(border-box, false);
+        @include setMargin(0);
+        @include setPadding(0);
+       
+    }
+
+    img{
+        @include setMaxWidthByPercentage(100%);
+    }
+}

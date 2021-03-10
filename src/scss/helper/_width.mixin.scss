@@ -1,0 +1,26 @@
+@import './functions';
+
+@mixin setWidthByPercentage($width, $isImportant: false) {
+    @if($isImportant){
+        width: $width !important;
+    } @else{
+        width: $width;
+    }
+}
+
+@mixin setMaxWidthByPercentage($width, $isImportant: false) {
+    @if $isImportant {
+        max-width: $width !important;
+    } @else {
+        max-width: $width;
+    }
+}
+
+@mixin setMaxWidthByRem($width, $isImportant: false){
+    @if $isImportant {
+        max-width: convertToRem($width) !important;
+    } @else {
+        max-width: convertToRem($width);
+    }
+}
+

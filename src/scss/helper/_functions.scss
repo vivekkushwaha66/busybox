@@ -1,0 +1,23 @@
+@import './variables';
+
+@function convertToRem($fontSize: 16) {
+    @return #{$fontSize / $defaultFontSize}rem;
+}
+
+@function setPrimaryColor($color) {
+    $primary : $color !default;
+}
+
+@function setSecondaryColor($color){
+    $secondary: $color;
+}
+
+
+@function setTheme( $themes){
+    $colors: $theme !default;
+}
+
+@mixin setDefaultFontSize($fontSize:16) {
+    $defaultFontSize: $fontSize !global;
+}
+

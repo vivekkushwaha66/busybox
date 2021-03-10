@@ -1,0 +1,12 @@
+@import './margin.mixin';
+@import './padding.mixin';
+@import './width.mixin';
+
+@mixin setBoxSizing ($boxSizing: border-box, $isImportant: false){
+    @if($isImportant){
+        box-sizing: $boxSizing !important;
+    } @else{
+        box-sizing: $boxSizing;
+    }
+}
+

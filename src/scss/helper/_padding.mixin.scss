@@ -1,0 +1,50 @@
+@import "./functions";
+
+@mixin setPaddingTop($padding, $isImportant: false) {
+    @if $isImportant {
+        padding-top: convertToRem($padding) !important;
+    }@else{
+        padding-top: convertToRem($padding);
+    }
+}
+@mixin setPaddingRight($padding, $isImportant: false) {
+    @if $isImportant {
+        padding-right: convertToRem($padding) !important;
+    }@else{
+        padding-right: convertToRem($padding);
+    }
+}
+@mixin setPaddingBottom($padding, $isImportant: false) {
+    @if $isImportant {
+        padding-bottom: convertToRem($padding) !important;
+    }@else{
+        padding-bottom: convertToRem($padding);
+    }
+}
+
+@mixin setPaddingLeft($padding, $isImportant: false) {
+    @if $isImportant {
+        padding-left: convertToRem($padding) !important;
+    } @else{
+        padding-left: convertToRem($padding);
+    }
+}
+
+@mixin setPaddingHorizontal($padding, $isImportant: false) {
+    @include setPaddingLeft($padding, $isImportant);
+    @include setPaddingRight($padding, $isImportant);
+}
+
+
+@mixin setPaddingVertical($padding, $isImportant: false) {
+    @include setPaddingTop($padding, $isImportant);
+    @include setPaddingBottom($padding, $isImportant);
+}
+
+@mixin setPadding($padding, $isImportant: false) {
+    @if $isImportant {
+        padding: convertToRem($padding) !important;
+    } @else{
+        padding: convertToRem($padding);
+    }
+}

@@ -1,0 +1,50 @@
+@import "./functions";
+
+@mixin setMarginTop($margin, $isImportant: false) {
+    @if $isImportant {
+        margin-top: convertToRem($margin) !important;
+    }@else{
+        margin-top: convertToRem($margin);
+    }
+}
+@mixin setMarginRight($margin, $isImportant: false) {
+    @if $isImportant {
+        margin-right: convertToRem($margin) !important;
+    }@else{
+        margin-right: convertToRem($margin);
+    }
+}
+@mixin setMarginBottom($margin, $isImportant: false) {
+    @if $isImportant {
+        margin-bottom: convertToRem($margin) !important;
+    }@else{
+        margin-bottom: convertToRem($margin);
+    }
+}
+
+@mixin setMarginLeft($margin, $isImportant: false) {
+    @if $isImportant {
+        margin-left: convertToRem($margin) !important;
+    } @else{
+        margin-left: convertToRem($margin);
+    }
+}
+
+@mixin setMarginHorizontal($margin, $isImportant: false) {
+    @include setMarginLeft($margin, $isImportant);
+    @include setMarginRight($margin, $isImportant);
+}
+
+
+@mixin setMarginVertical($margin, $isImportant: false) {
+    @include setMarginTop($margin, $isImportant);
+    @include setMarginBottom($margin, $isImportant);
+}
+
+@mixin setMargin($margin, $isImportant: false) {
+    @if $isImportant {
+        margin: convertToRem($margin) !important;
+    }@else{
+        margin: convertToRem($margin);
+    }
+}
